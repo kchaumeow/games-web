@@ -2,16 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    box-sizing: border-box;
-    background-color: #272B30;
-    color: white;
+a.active {
+    color: #2563EB;
 }
 
 #root {
-    height: 100dvh;
-}
-
-a.active {
-    color: #3B82F6;
+    color: white;
+    width: 100%;
 }

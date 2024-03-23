@@ -1,16 +1,9 @@
-import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
-import { SerializedError } from "@reduxjs/toolkit";
-
-export default function Error({
-  error,
-}: {
-  error: FetchBaseQueryError | SerializedError;
-}) {
+export default function Error({ error }: { error: unknown }) {
   return (
-    <div className="h-full flex flex-col place-content-center place-items-center">
-      <h2 className="text-blue-500 text-4xl uppercase">Error</h2>
+    <div className="mx-auto my-auto place-items-center flex flex-col gap-5">
+      <h2 className="text-blue-500 text-4xl uppercase">Error {error.status}</h2>
       <p className="text-gray-600 text-4xl">Something went wrong</p>
-      <p className="text-blue-500 text-2xl">{JSON.stringify(error)}</p>
+      <p className="text-blue-500 text-4xl">{error.data?.status_message}</p>
     </div>
   );
 }

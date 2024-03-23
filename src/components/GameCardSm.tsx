@@ -7,9 +7,15 @@ export default function GameCardSm({ game }: { game: GameSm }) {
       to={`/games/${game.id}`}
       rel="noopener noreferrer"
       className="shadow-2xl hover:scale-110
-       transition duration-300 bg-gray-700 rounded-md w-365 border-neutral-700 border content-center items-center flex flex-col text-gray-400 hover:text-white"
+       transition duration-300 bg-[#1C1E22] rounded-md w-365 border-neutral-700 border content-center items-center flex flex-col text-gray-400 hover:text-white"
     >
-      <img src={game.thumbnail} alt={game.title} className="rounded-t-md" />
+      <img
+        src={game.thumbnail}
+        alt={game.title}
+        className="rounded-t-md"
+        width={365}
+        height={206}
+      />
       <div className="flex w-[90%] justify-between m-4 items-center">
         <p className="text-md whitespace-nowrap text-ellipsis w-200">
           {game.title}

@@ -20,7 +20,16 @@ export const gamesApi = createApi({
   }),
   endpoints: (builder) => ({
     getAllGames: builder.query({
-      query: () => "/games",
+      query: (args) => {
+        return {
+          url: "/games",
+          params: {
+            "sort-by": args["sort-by"] || undefined,
+            platform: args["platform"] || undefined,
+            category: args["category"] || undefined,
+          },
+        };
+      },
     }),
     getGameById: builder.query({
       query: (arg) => {
