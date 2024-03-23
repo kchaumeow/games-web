@@ -32,7 +32,7 @@ export type GameBG = {
 
 type Requirements = {
   os: string;
-  proccessor: string;
+  processor: string;
   memory: string;
   graphics: string;
   storage: string;
