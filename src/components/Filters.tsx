@@ -1,5 +1,12 @@
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function Filters({
   onChange,
@@ -9,27 +16,22 @@ export default function Filters({
   value: string;
 }) {
   return (
-    <RadioGroup
-      defaultValue="release_date"
-      onValueChange={onChange}
-      value={value}
-    >
-      <div className="flex items-center space-x-2">
-        <RadioGroupItem value="release_date" id="r1" />
-        <Label htmlFor="r1">Release date</Label>
-      </div>
-      <div className="flex items-center space-x-2">
-        <RadioGroupItem value="relevance" id="r2" />
-        <Label htmlFor="r2">Relevance</Label>
-      </div>
-      <div className="flex items-center space-x-2">
-        <RadioGroupItem value="alphabetical" id="r3" />
-        <Label htmlFor="r3">Alphabetical</Label>
-      </div>
-      <div className="flex items-center space-x-2">
-        <RadioGroupItem value="popularity" id="r3" />
-        <Label htmlFor="r3">Popularity</Label>
-      </div>
-    </RadioGroup>
+    <Select onValueChange={onChange} value={value}>
+      <SelectTrigger className="bg-gray-800 border-neutral-600">
+        <SelectValue
+          placeholder="Select sorting"
+          className="bg-gray-800 border-neutral-600 "
+        />
+      </SelectTrigger>
+      <SelectContent className="bg-gray-800 text-white border-neutral-600">
+        <SelectGroup>
+          <SelectLabel>Sort by</SelectLabel>
+          <SelectItem value="release_date">Release date</SelectItem>
+          <SelectItem value="relevance">Relevance</SelectItem>
+          <SelectItem value="alphabetical">Alphabetical</SelectItem>
+          <SelectItem value="popularity">Popularity</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
   );
 }

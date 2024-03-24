@@ -100,7 +100,11 @@ export default function GameCardBg({ game }: { game: GameBG }) {
                   <div className="p-1">
                     <Card className="bg-[#272B30]">
                       <CardContent className="flex aspect-video items-center justify-center p-px">
-                        <img src={screenshot.image} className="rounded" />
+                        <img
+                          src={screenshot.image}
+                          className="rounded"
+                          alt="screenshot"
+                        />
                       </CardContent>
                     </Card>
                   </div>
