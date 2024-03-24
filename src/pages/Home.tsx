@@ -23,8 +23,8 @@ export default function Home() {
   if (isLoading)
     return <LoaderCircle className="animate-spin h-40 w-40 mx-auto my-auto" />;
   return (
-    <div className="flex flex-col w-full h-full font-bold place-content-center">
-      <div className="w-1/2 md:w-1/4 mx-auto mt-5 flex gap-3 place-items-center">
+    <div className="flex flex-col w-full h-full font-bold">
+      <div className="mx-auto my-5 flex gap-3 place-items-center ">
         <Input
           className="bg-gray-800 border-neutral-600"
           type="text"
