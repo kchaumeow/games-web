@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Tailwind v4 changed the default border color to currentcolor;
+  keep the v3 default so existing `border` utilities look the same.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 a.active {
     color: #2563EB;

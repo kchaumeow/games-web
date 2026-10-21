@@ -20,11 +20,11 @@ export default function GameCardBg({ game }: { game: GameBG }) {
           <img
             src={game.thumbnail}
             alt={game.title}
-            className="rounded-sm shadow-2xl hidden md:block"
+            className="rounded-xs shadow-2xl hidden md:block"
             width={500}
           />
           <Link
-            className="bg-blue-500 px-2 py-1 rounded-sm w-1/2 text-white w-full text-center hover:bg-blue-600 transition-colors duration-300 text-2xl"
+            className="bg-blue-500 px-2 py-1 rounded-xs w-1/2 text-white w-full text-center hover:bg-blue-600 transition-colors duration-300 text-2xl"
             target="_blank"
             to={game.game_url}
           >
@@ -36,7 +36,7 @@ export default function GameCardBg({ game }: { game: GameBG }) {
             <h2 className="text-3xl text-ellipsis uppercase">{game.title}</h2>
             <div
               className={
-                "w-fit py-1 px-2 rounded " +
+                "w-fit py-1 px-2 rounded-sm " +
                 (game.status === "Live" ? "bg-green-600" : "bg-red-600")
               }
             >
@@ -56,7 +56,7 @@ export default function GameCardBg({ game }: { game: GameBG }) {
           </div>
 
           {game.minimum_system_requirements && (
-            <div className="border border-gray-400 p-2 rounded my-3 ">
+            <div className="border border-gray-400 p-2 rounded-sm my-3 ">
               <h4 className="text-xl">Minimal requirements</h4>
               <ListItem
                 characteristic={"OS"}
@@ -102,7 +102,7 @@ export default function GameCardBg({ game }: { game: GameBG }) {
                       <CardContent className="flex aspect-video items-center justify-center p-px">
                         <img
                           src={screenshot.image}
-                          className="rounded"
+                          className="rounded-sm"
                           alt="screenshot"
                         />
                       </CardContent>

@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-[100vh]">
+    <div className="flex flex-col min-h-screen">
       <nav className="flex content-between w-full items-center justify-between px-4 bg-[#1C1E22] z-20">
         <NavLink className="font-bold text-2xl m-3 uppercase" to="/">
           Home
