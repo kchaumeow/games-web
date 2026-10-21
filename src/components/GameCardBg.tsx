@@ -14,7 +14,7 @@ import {
 
 export default function GameCardBg({ game }: { game: GameBG }) {
   return (
-    <div className="shadow-2xl bg-[#1C1E22] rounded-md w-365 border-neutral-700 border content-center flex flex-col p-4 sm:w-[90%] md:w-[80%] lg:w-[70%] font-bold">
+    <div className="shadow-2xl bg-[#1C1E22] rounded-md border-neutral-700 border content-center flex flex-col p-4 sm:w-[90%] md:w-[80%] lg:w-[70%] font-bold">
       <div className="flex gap-10">
         <div className="flex flex-col gap-6 items-center">
           <img
