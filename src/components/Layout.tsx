@@ -1,7 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
-  console.log(Number.isFinite("0"));
   return (
     <div className="flex flex-col min-h-[100vh]">
       <nav className="flex content-between w-full items-center justify-between px-4 bg-[#1C1E22] z-20">

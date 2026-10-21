@@ -5,7 +5,7 @@ import GamesList from "../components/GamesList.tsx";
 import { useState } from "react";
 import Filters from "@/components/Filters.tsx";
 import { Input } from "@/components/ui/input.tsx";
-import { Button } from "../../@/components/ui/button.tsx";
+import { Button } from "@/components/ui/button.tsx";
 
 export default function Home() {
   const [platform, setPlatform] = useState<string>();
